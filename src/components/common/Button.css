@@ -1,0 +1,58 @@
+.fp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  padding: 10px 18px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease, border-color 0.12s ease,
+    color 0.12s ease, opacity 0.12s ease;
+  line-height: 1.2;
+}
+
+.fp-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.fp-button__icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.fp-button--primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+.fp-button--primary:hover:not(:disabled) {
+  background: var(--color-accent-strong);
+}
+
+.fp-button--secondary {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border-color: var(--color-border-strong);
+}
+.fp-button--secondary:hover:not(:disabled) {
+  border-color: var(--color-accent);
+}
+
+.fp-button--ghost {
+  background: transparent;
+  color: var(--color-ink-soft);
+}
+.fp-button--ghost:hover:not(:disabled) {
+  color: var(--color-ink);
+  background: var(--color-surface-sunken);
+}
+
+.fp-button--danger {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+.fp-button--danger:hover:not(:disabled) {
+  background: #f0dcd7;
+}

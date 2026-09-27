@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Fusion PDF — Design tokens
+   Warm cream background, white document cards, charcoal type.
+   One accent: deep ink-indigo. No gradients, minimal motion.
+   ========================================================================== */
+
+:root {
+  --color-bg: #f6f3ec;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #efebe1;
+  --color-border: #e2ddce;
+  --color-border-strong: #d3cdb9;
+
+  --color-ink: #262420;
+  --color-ink-soft: #5a564d;
+  --color-ink-faint: #8b8677;
+
+  --color-accent: #33456b;
+  --color-accent-strong: #232f4a;
+  --color-accent-soft: #e9edf5;
+
+  --color-danger: #a4402f;
+  --color-danger-soft: #f6e9e6;
+  --color-success: #3b6b4f;
+  --color-success-soft: #e8f0ea;
+
+  --font-display: "Fraunces", "Iowan Old Style", ui-serif, Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-card: 0 1px 2px rgba(38, 36, 32, 0.04), 0 6px 16px -8px rgba(38, 36, 32, 0.12);
+  --shadow-raised: 0 2px 4px rgba(38, 36, 32, 0.06), 0 16px 32px -12px rgba(38, 36, 32, 0.18);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
